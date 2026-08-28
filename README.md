@@ -16,7 +16,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/jupyterlab-ai-commands-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/jupyterlab-ai-commands-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -31,49 +33,93 @@ Current release info
 Installing jupyterlab-ai-commands
 =================================
 
-Installing `jupyterlab-ai-commands` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `jupyterlab-ai-commands` from the `conda-forge/label/jupyter-ai_rc` channel can be achieved by adding `conda-forge/label/jupyter-ai_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/jupyter-ai_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyterlab-ai-commands` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install jupyterlab-ai-commands
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install jupyterlab-ai-commands
 ```
 
-It is possible to list all of the versions of `jupyterlab-ai-commands` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
 
 ```
-conda search jupyterlab-ai-commands --channel conda-forge
+# for adding to your local project
+pixi add jupyterlab-ai-commands
+# for installing globally
+pixi global install jupyterlab-ai-commands
 ```
 
-or with `mamba`:
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `jupyterlab-ai-commands` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
-mamba search jupyterlab-ai-commands --channel conda-forge
+conda search jupyterlab-ai-commands --channel conda-forge/label/jupyter-ai_rc
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With mamba</summary>
+
+```
+mamba search jupyterlab-ai-commands --channel conda-forge/label/jupyter-ai_rc
+```
+
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search jupyterlab-ai-commands --channel conda-forge/label/jupyter-ai_rc
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search jupyterlab-ai-commands --channel conda-forge
+mamba repoquery search jupyterlab-ai-commands --channel conda-forge/label/jupyter-ai_rc
 
 # List packages depending on `jupyterlab-ai-commands`:
-mamba repoquery whoneeds jupyterlab-ai-commands --channel conda-forge
+mamba repoquery whoneeds jupyterlab-ai-commands --channel conda-forge/label/jupyter-ai_rc
 
 # List dependencies of `jupyterlab-ai-commands`:
-mamba repoquery depends jupyterlab-ai-commands --channel conda-forge
+mamba repoquery depends jupyterlab-ai-commands --channel conda-forge/label/jupyter-ai_rc
 ```
+
+</details>
 
 
 About conda-forge
@@ -143,5 +189,6 @@ Feedstock Maintainers
 =====================
 
 * [@brichet](https://github.com/brichet/)
+* [@dlqqq](https://github.com/dlqqq/)
 * [@jtpio](https://github.com/jtpio/)
 
