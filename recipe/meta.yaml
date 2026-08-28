@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-ai-commands" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0rc0" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyterlab_ai_commands-{{ version }}.tar.gz
-  sha256: 4a5975d8fa6a9a4da16588ae9f4fa04539592b7a72a97662c27f2a91be2814b7
+  sha256: 562ef5776926d76d5104bef91dd21114e17eda68bde6cdc18ab87fd5835e857c
 
 build:
   noarch: python
@@ -25,7 +25,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - jupyterlab-diff >=0.6.0,<0.7
+    - jupyterlab-diff >=0.6.0,<0.8
 
 test:
   imports:
